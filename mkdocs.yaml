@@ -1,0 +1,62 @@
+# Project information
+site_name: My Docs
+
+# Configuration
+theme:
+  name: material                                    # https://squidfunk.github.io/mkdocs-material/
+  language: en
+  features:
+    # - content.code.annotate   # [Insider Only]    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
+    - content.tabs.link                             # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/?h=tab+link#linking-content-tabs
+    # - navigation.indexes      # [Insider Only]    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#section-index-pages
+    - navigation.instant                            # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#instant-loading
+    # - navigation.tabs         # [Insider Only]    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#navigation-tabs
+    # - navigation.tabs.sticky  # [Insider Only]    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#sticky-navigation-tabs
+    - navigation.top                                # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#back-to-top-button
+    # - navigation.tracking     # [Insider Only]    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navi#anchor-tracking
+    - search.share                                  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/?h=search.share#search-sharing
+    - search.suggest                                # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/?h=search.share#search-suggestions
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Additional CSS
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started: 
+    - getting-started/index.md
