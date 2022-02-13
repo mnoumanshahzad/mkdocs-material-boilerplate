@@ -10,5 +10,5 @@ build:
     post-build:
       - echo 'post-build'
 run:
-  runtime-version: 3.9.6
+  runtime-version: 3.7.11
   command: mkdocs serve --no-livereload --verbose
